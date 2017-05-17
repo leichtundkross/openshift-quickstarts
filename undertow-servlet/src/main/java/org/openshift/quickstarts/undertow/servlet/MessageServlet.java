@@ -44,6 +44,10 @@ public class MessageServlet extends HttpServlet {
 
     @Override
     protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+        String a= "a";
+        for (int i=0;i<1000000;i++) {
+         a += "b";   
+        }    
         PrintWriter writer = resp.getWriter();
         writer.write(message);
         writer.close();
